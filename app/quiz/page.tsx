@@ -138,7 +138,7 @@ export default function QuizPage() {
 
               {/* 不正解メッセージ */}
               {gameStatus === "incorrect" && (
-                <p style={{ color: "#fff", marginTop: "10px" }}>残念！もう一度！</p>
+                <p style={{ color: "#yellow", marginTop: "10px" }}>残念！もう一度！</p>
               )}
             </div>
           )}
