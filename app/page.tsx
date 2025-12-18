@@ -30,7 +30,7 @@ async function getJapaneseName(id: string) {
 // 2. リスト作成のメイン関数（ここが改造ポイント！）
 async function getPokemonList(): Promise<PokemonWithJaName[]> {
   // まず20匹の英語リストを取得
-  const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
+  const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1025");
   const data: PokemonListResponse = await response.json();
 
   // 🚀 20回の通信を一斉に予約する（まだ待たない）
