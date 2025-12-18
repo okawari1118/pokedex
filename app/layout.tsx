@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+// 🆕 1. ここでインポートします
+import { GoogleAnalytics } from '@next/third-parties/google';
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,11 +26,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // 日本語サイトなら lang="en" を lang="ja" にすると良いです
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        
+        {/* 🆕 2. ここにIDを指定して配置します */}
+        {/* 提示いただいたIDを入れています */}
+        <GoogleAnalytics gaId="G-LM0XKNT2NN" />
       </body>
     </html>
   );
