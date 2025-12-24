@@ -118,7 +118,7 @@ export default function WeightPage() {
     init();
   }, []);
 
-  if (!pokeA || !pokeB) return <div style={{ textAlign: 'center', marginTop: '100px' }}>レフェリー準備中...</div>;
+  if (!pokeA || !pokeB) return <div style={{ textAlign: 'center', marginTop: '100px' }}>ロード中...</div>;
 
   return (
     <main style={{ minHeight: '100vh', background: '#f9f9f9', paddingTop: '50px' }}>
