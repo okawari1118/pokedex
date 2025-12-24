@@ -119,6 +119,9 @@ export default async function Home() {
         <Link href="/quiz/weight" style={{ ...styles.quizButtonBase, backgroundColor: '#3366cc' }}>
           ⚖️ 重さ比べクイズ
         </Link>
+        <Link href="/quiz" style={{ ...styles.quizButtonBase, backgroundColor: '#33cca6ff' }}>
+          📖 番号クイズ
+        </Link>
       </div>
 
       <h2 style={{ textAlign: "center", color: "#333", marginBottom: "20px" }}>ポケモン一覧</h2>

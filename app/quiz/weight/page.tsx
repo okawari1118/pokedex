@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-
+import Link from "next/link";
 // --- 部品（コンポーネント）の定義 ---
 
 interface Pokemon {
@@ -70,8 +70,12 @@ const WeightQuiz = ({ pokeA, pokeB }: { pokeA: Pokemon, pokeB: Pokemon }) => {
                 </button>
             </div>
         )}
+              <div style={{ marginTop: "30px" }}>
+        <Link href="/">← 図鑑に戻る</Link>
+      </div>
       </div>
     </div>
+    
   );
 };
 
@@ -121,6 +125,7 @@ export default function WeightPage() {
         <div style={{ maxWidth: '600px', margin: '0 auto', background: 'white', borderRadius: '20px', padding: '20px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }}>
             <WeightQuiz pokeA={pokeA} pokeB={pokeB} />
         </div>
+        
     </main>
   );
 }

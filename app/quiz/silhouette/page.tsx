@@ -1,7 +1,7 @@
 "use client"; // ← 重要！これがないとHooksが動きません
 
 import { useState, useEffect } from 'react';
-
+import Link from "next/link";
 // --- ここから：部品の定義 ---
 
 // さっき定義した型を使う（再利用！）
@@ -74,6 +74,9 @@ export const SilhouetteQuiz = ({ pokemon }: QuizProps) => {
             </button>
         </div>
       )}
+                    <div style={{ marginTop: "30px" }}>
+        <Link href="/">← 図鑑に戻る</Link>
+      </div>
     </div>
   );
 };
